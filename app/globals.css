@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --background: #2A194E;
+  --foreground: #F6E2FE;
+}
+
+:root[data-theme="light"] {
+  --background: #2A194E;
+  --foreground: #F6E2FE;
+}
+
+:root[data-theme="dark"] {
+  --background: #F6E2FE;
+  --foreground: #2A194E;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-noto-serif);
+  --font-display: var(--font-germania-one);
+  --font-body: var(--font-noto-serif);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background: #F6E2FE;
+    --foreground: #2A194E;
+  }
+}
+
+@layer utilities {
+  .root {
+    @apply min-h-screen px-6 py-10 font-body;
+  }
+
+  .header {
+    @apply mb-8 flex flex-wrap items-center justify-between gap-4;
+  }
+
+  .title {
+    @apply font-display;
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .main {
+    @apply grid gap-10 lg:grid-cols-[280px_1fr];
+  }
+
+  .nav {
+    @apply space-y-4;
+  }
+
+  .portrait {
+    @apply max-w-[220px];
+  }
+
+  .links {
+    @apply space-y-2;
+  }
+
+  .sections {
+    @apply space-y-10;
+  }
+
+  .section-title {
+    @apply font-display;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .section-subtitle {
+    @apply font-display;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .video {
+    @apply w-full max-w-[640px];
+  }
+
+  .footer {
+    @apply mt-12;
+  }
+
+  .theme-toggle {
+    @apply rounded-full border border-foreground/30 px-4 py-2 text-sm transition hover:border-foreground;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-noto-serif), Georgia, "Times New Roman", serif;
+}
