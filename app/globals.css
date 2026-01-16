@@ -88,6 +88,10 @@
   .theme-toggle {
     @apply rounded-full border border-foreground/30 px-4 py-2 text-sm transition hover:border-foreground;
   }
+
+  .cursor-dot {
+    @apply pointer-events-none fixed left-0 top-0 z-50 h-3 w-3 rounded-full bg-foreground/80;
+  }
 }
 
 body {

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import CursorDot from "./components/cursor-dot";
 
 const notoSerif = localFont({
   variable: "--font-noto-serif",
@@ -38,6 +39,7 @@ export default function RootLayout({
       <body
         className={`${notoSerif.variable} ${germaniaOne.variable} antialiased`}
       >
+        <CursorDot />
         {children}
       </body>
     </html>
