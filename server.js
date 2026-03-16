@@ -7,7 +7,7 @@ import createDOMPurify from "dompurify";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST   = join(__dirname, "dist");
-const VIDEOS = join(__dirname, "videos");
+const VIDEOS = process.env.VIDEOS_PATH || join(__dirname, "videos");
 const PORT   = process.env.PORT || 3000;
 
 // ── Blog feed ─────────────────────────────────────────────────────────────────
