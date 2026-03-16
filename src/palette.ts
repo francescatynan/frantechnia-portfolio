@@ -46,12 +46,12 @@ export function applyPalette(id: PaletteId, customAccent?: string) {
 export function getSavedPalette(): { id: PaletteId; customAccent?: string } {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return { id: "sand" };
+    if (!raw) return { id: "rose" };
     const parsed = JSON.parse(raw) as { id?: PaletteId; customAccent?: string };
-    if (!parsed.id) return { id: "sand" };
+    if (!parsed.id) return { id: "rose" };
     return { id: parsed.id, customAccent: parsed.customAccent };
   } catch {
-    return { id: "sand" };
+    return { id: "rose" };
   }
 }
 
