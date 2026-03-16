@@ -6,12 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "start": "node server.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "blog:fetch": "node scripts/fetch-listed-blog.mjs"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.163.3",
+    "express": "^5.2.1",
     "i18next": "^25.8.13",
     "lucide-react": "^0.577.0",
     "react": "^19.2.0",

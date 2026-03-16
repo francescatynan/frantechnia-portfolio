@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { lazy, Suspense } from "react";
-import type { ComponentType } from "react";
+import type { ComponentType, FunctionComponent } from "react";
 import { useTranslation } from "react-i18next";
 
 function Fallback() {
@@ -12,15 +12,15 @@ function Fallback() {
   );
 }
 
-export function lazyRoute<P extends Record<string, unknown>>(
-  importer: () => Promise<{ default: ComponentType<P> }>
-): ComponentType<P> {
+export function lazyRoute(
+  importer: () => Promise<{ default: ComponentType }>
+): FunctionComponent {
   const LazyComp = lazy(importer);
 
-  return function LazyRouteWrapper(props: P) {
+  return function LazyRouteWrapper() {
     return (
       <Suspense fallback={<Fallback />}>
-        <LazyComp {...props} />
+        <LazyComp />
       </Suspense>
     );
   };
