@@ -1,11 +1,32 @@
+import { useState, useEffect } from "react";
 import { useParams } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
-import { blogMeta, blogPosts } from "../content/blog.generated";
+import { fetchBlog, type BlogPost } from "../content/blogApi";
 
 export default function BlogPostPage() {
   const { slug } = useParams({ strict: false }) as { slug: string };
   const { t } = useTranslation("common");
-  const post = blogPosts.find((p) => p.slug === slug);
+
+  // undefined = loading, null = not found, BlogPost = loaded
+  const [post, setPost]       = useState<BlogPost | null | undefined>(undefined);
+  const [feedUrl, setFeedUrl] = useState("https://listed.to/@frantechnia/feed");
+
+  useEffect(() => {
+    fetchBlog()
+      .then((data) => {
+        setFeedUrl(data.feedUrl);
+        setPost(data.posts.find((p) => p.slug === slug) ?? null);
+      })
+      .catch(() => setPost(null));
+  }, [slug]);
+
+  if (post === undefined) {
+    return (
+      <main className="pagePost">
+        <p style={{ color: "var(--muted)" }}>{t("actions.loading")}</p>
+      </main>
+    );
+  }
 
   if (!post) {
     return (
@@ -32,17 +53,16 @@ export default function BlogPostPage() {
             {t("blog.viewOnListed")}
           </a>{" "}
           ·{" "}
-          <a href={blogMeta.feedUrl} target="_blank" rel="noreferrer" className="inlineLink">
+          <a href={feedUrl} target="_blank" rel="noreferrer" className="inlineLink">
             RSS
           </a>
         </p>
       </header>
 
-      {/* Render cached HTML */}
       <article
-  className="blog-content"
-  dangerouslySetInnerHTML={{ __html: post.html }}
-/>
+        className="blog-content"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
     </main>
   );
 }

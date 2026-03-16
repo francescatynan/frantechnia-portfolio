@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import { useTranslation, Trans } from "react-i18next";
 import { Github, Linkedin, Instagram, Mail, MessageSquare } from "lucide-react";
@@ -8,7 +8,7 @@ import { StackGrid } from "../components/ui/StackBadge";
 import ObfuscatedMailto from "../components/ObfuscatedMailto";
 import { experience } from "../content/experience";
 import { projects } from "../content/projects";
-import { blogPosts } from "../content/blog.generated";
+import { fetchBlog, type BlogPost } from "../content/blogApi";
 
 const STACK = [
   "React", "TypeScript", "TanStack Router", "GraphQL", "AWS",
@@ -19,6 +19,11 @@ const STACK = [
 export default function HomePage() {
   const { t } = useTranslation("common");
   const [aboutExpanded, setAboutExpanded] = useState(false);
+  const [recentPosts, setRecentPosts]     = useState<BlogPost[]>([]);
+
+  useEffect(() => {
+    fetchBlog().then((data) => setRecentPosts(data.posts.slice(0, 3))).catch(() => {});
+  }, []);
 
   const SOCIAL = [
     { label: "GitHub",     href: "https://github.com/francescatynan",           Icon: Github },
@@ -29,7 +34,6 @@ export default function HomePage() {
 
   const featuredExperience = experience.filter((e) => e.featured === true);
   const featuredProjects   = projects.filter((p) => p.featured === true);
-  const recentPosts        = blogPosts.slice(0, 3);
 
   return (
     <div className="pageLayout">
