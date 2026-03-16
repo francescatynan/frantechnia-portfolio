@@ -12,7 +12,7 @@ const app = express();
 app.use(express.static(DIST));
 
 // SPA fallback — all unmatched routes serve index.html
-app.get("*", (_req, res) => {
+app.use((_req, res) => {
   res.sendFile(join(DIST, "index.html"));
 });
 
