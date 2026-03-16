@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "blog": "Blog"
+  },
+  "actions": {
+    "skipToContent": "Skip to content",
+    "viewOnGithub": "View on GitHub",
+    "viewSite": "View Site",
+    "privateRepo": "Private repository",
+    "loading": "Loading…",
+    "colourAccent": "Colour Accent",
+    "fixContrast": "Fix Insufficient Colour Contrast",
+    "custom": "Custom",
+    "pickCustomAccent": "Pick custom accent colour",
+    "contrastMessage": "{{ratio}}:1 fails AA — <webaim>See WebAIM Colour Contrast Checker</webaim> for Accessibility Details",
+    "contrastRatioTitle": "Contrast ratio against {{theme}} background: {{ratio}}:1"
+  },
+  "theme": {
+    "dark": "Dark",
+    "light": "Light",
+    "toggle": "Toggle theme"
+  },
+  "home": {
+    "title": "CV",
+    "summaryTitle": "Summary",
+    "experienceTitle": "CV Highlights",
+    "cvRequest": "Full CV available on request →",
+    "selectedProjectsTitle": "Featured Projects",
+    "skillsTitle": "Stack",
+    "contactTitle": "Contact",
+    "moreProjects": "More on the Projects page.",
+    "aboutTitle": "About",
+    "socialsTitle": "Socials",
+    "allProjects": "All Projects →",
+    "allPosts": "All posts →",
+    "seeMore": "See More →",
+    "seeLess": "See Less ←",
+    "postsSoon": "Posts coming soon.",
+    "getInTouch": "Get in Touch",
+    "portraitAlt": "Closeup picture of a woman, Francesca Tynan, smiling.",
+    "projectsCarousel": "Projects carousel",
+    "goToProject": "Go to project {{n}}",
+    "bio1": "Hi, I'm Francesca, a Junior Software Engineer at <tmb>TMB Marketing & Communications</tmb>.",
+    "bio2": "A career switcher, I am a <cfg>Code First Girls</cfg> CFGDegree alumna having studied the Software/Data Engineering, Cyber Security & Vulnerability Research pathway, sponsored by <gchq>GCHQ</gchq>.",
+    "bio3": "With my Code First Girls studies delving into security principles and vulnerabilities, secure coding practices are at the forefront of my approach — AAA, the CIA triad, HTTPS, input validation, and security by design. Considerations of access control, salting and hashing, and the principle of least privilege (PoLP) are part of my everyday thinking.",
+    "bio4": "Beyond languages, I'm comfortable with TDD, Git, Jira, Agile, pair programming, and code reviews. Collaborating with colleagues, communicating trade-offs and navigating stakeholder requirements are part of my day-to-day process.",
+    "bio5": "I was also a <cajigo>Cajigo</cajigo> 100 Women in Tech 2024 Mentee.",
+    "bio6": "My previous career background was in customer service, including training a team of new employees, mentoring colleagues and leading a commercial scale smart meter troubleshooting project via Google Sheets and industry-standard diagnostic tooling. I attained awards for performance and produced support materials for the company's intranet knowledge base."
+  },
+  "experience": {
+    "remote": "Remote",
+    "tmb": {
+      "role": "Junior Software Engineer",
+      "bullet0": "Full stack development across AWS, React, TypeScript, GraphQL, Postgres, Vite, Docker and Node.js.",
+      "bullet1": "Consistently working across a range of frontend and backend tickets, building new features across assorted client repositories.",
+      "bullet2": "Some of our clients include:"
+    },
+    "cfg-degree": {
+      "bullet0": "Intensive 16-week CFGDegree bootcamp in Software/Data Engineering.",
+      "bullet1": "4-week '+Masters' Cyber Security extension and 8-week Vulnerability Research specialisation.",
+      "bullet2": "Group project: built Code First Guard, a password generator and manager, acting as project manager.",
+      "bullet3": "Group Cyber Security Vulnerability Report assessing our own CFGDegree project.",
+      "bullet4": "Group Vulnerability Research Report including capture the flags, creating bash scripts to automate solutions, manual code review and misc. techniques."
+    }
+  },
+  "projectData": {
+    "code-first-guard": {
+      "summary": "Customisable password generator and manager built by a team of six for the CFGDegree Summer 2024 programme, delivered within a month."
+    },
+    "frantechnia-portfolio": {
+      "summary": "My March 2026 personal portfolio site built with React 19, TypeScript, TanStack Router, and Vite. Featuring i18n, custom colour accent system, and security hardening."
+    },
+    "portfolio-v1": {
+      "summary": "December 2023 – March 2026. My first portfolio site was built with vanilla HTML, CSS, and JavaScript. It had a two-column, side navigation layout with video demo."
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "This is a select documentation of projects I have worked on, some of our work is developed for client internal use and isn't possible to share but I continue to develop personal portfolio projects to demonstrate different sets of skills.",
+    "notFound": "Project not found",
+    "notesTitle": "Project Notes",
+    "noNotes": "No project notes yet.",
+    "sectionProblem": "Problem",
+    "sectionRole": "Your role",
+    "sectionHighlights": "Highlights",
+    "sectionTradeoffs": "Tradeoffs",
+    "sectionPerf": "Performance / economy",
+    "tbd": "TBD"
+  },
+  "blog": {
+    "title": "Blog",
+    "updated": "Last updated:",
+    "englishNotice": "This blog is published in English and hosted on Listed.",
+    "listedBackup": "Listed",
+    "postNotFound": "Post not found",
+    "noPostSlug": "No post with slug:",
+    "viewOnListed": "View on Listed"
+  }
+}

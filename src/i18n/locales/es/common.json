@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "projects": "Proyectos",
+    "blog": "Blog"
+  },
+  "actions": {
+    "skipToContent": "Saltar al contenido",
+    "viewOnGithub": "Ver en GitHub",
+    "viewSite": "Ver Sitio",
+    "privateRepo": "Repositorio privado",
+    "loading": "Cargando…",
+    "colourAccent": "Color de acento",
+    "fixContrast": "Corregir contraste de color insuficiente",
+    "custom": "Personalizado",
+    "pickCustomAccent": "Elegir color de acento personalizado",
+    "contrastMessage": "{{ratio}}:1 no cumple AA — <webaim>Ver WebAIM Colour Contrast Checker</webaim> para detalles de accesibilidad",
+    "contrastRatioTitle": "Relación de contraste con fondo {{theme}}: {{ratio}}:1"
+  },
+  "theme": {
+    "dark": "Oscuro",
+    "light": "Claro",
+    "toggle": "Cambiar tema"
+  },
+  "home": {
+    "title": "CV",
+    "summaryTitle": "Resumen",
+    "experienceTitle": "Aspectos destacados del CV",
+    "cvRequest": "CV completo disponible bajo solicitud →",
+    "selectedProjectsTitle": "Proyectos destacados",
+    "skillsTitle": "Stack",
+    "contactTitle": "Contacto",
+    "moreProjects": "Más en la página de Proyectos.",
+    "aboutTitle": "Acerca de",
+    "socialsTitle": "Redes Sociales",
+    "allProjects": "Todos los proyectos →",
+    "allPosts": "Todas las entradas →",
+    "seeMore": "Ver más →",
+    "seeLess": "Ver menos ←",
+    "postsSoon": "Entradas próximamente.",
+    "getInTouch": "Contactar",
+    "portraitAlt": "Foto de cerca de una mujer, Francesca Tynan, sonriendo.",
+    "projectsCarousel": "Carrusel de proyectos",
+    "goToProject": "Ir al proyecto {{n}}",
+    "bio1": "Hola, soy Francesca, Ingeniera de Software Junior en <tmb>TMB Marketing & Communications</tmb>.",
+    "bio2": "Soy una reconvertida profesional y alumna del CFGDegree de <cfg>Code First Girls</cfg>, habiendo estudiado el itinerario de Ingeniería de Software/Datos, Ciberseguridad e Investigación de Vulnerabilidades, patrocinado por <gchq>GCHQ</gchq>.",
+    "bio3": "Mis estudios en Code First Girls profundizan en principios de seguridad y vulnerabilidades, por lo que las prácticas de codificación segura están en el centro de mi enfoque — AAA, la tríada CIA, HTTPS, validación de entradas y seguridad por diseño. Las consideraciones sobre control de acceso, salting y hashing, y el principio de mínimo privilegio (PoLP) forman parte de mi pensamiento cotidiano.",
+    "bio4": "Más allá de los lenguajes, me siento cómoda con TDD, Git, Jira, Agile, programación en pareja y revisiones de código. Colaborar con colegas, comunicar compromisos y gestionar los requisitos de las partes interesadas son parte de mi proceso diario.",
+    "bio5": "También fui mentee del programa 100 Women in Tech 2024 de <cajigo>Cajigo</cajigo>.",
+    "bio6": "Mi trayectoria profesional anterior fue en atención al cliente, incluyendo la formación de nuevos empleados, la mentoría de compañeros y la dirección de un proyecto a escala comercial de resolución de incidencias de contadores inteligentes a través de Google Sheets y herramientas de diagnóstico estándar del sector. Recibí reconocimientos por rendimiento y produje materiales de apoyo para la base de conocimientos en la intranet de la empresa."
+  },
+  "experience": {
+    "remote": "Remoto",
+    "tmb": {
+      "role": "Ingeniera de Software Junior",
+      "bullet0": "Desarrollo full stack con AWS, React, TypeScript, GraphQL, Postgres, Vite, Docker y Node.js.",
+      "bullet1": "Trabajando de forma constante en una variedad de tickets de frontend y backend, construyendo nuevas funcionalidades en distintos repositorios de clientes.",
+      "bullet2": "Algunos de nuestros clientes incluyen:"
+    },
+    "cfg-degree": {
+      "bullet0": "Bootcamp intensivo de 16 semanas del CFGDegree en Ingeniería de Software/Datos.",
+      "bullet1": "Extensión de 4 semanas en Ciberseguridad '+Masters' y especialización de 8 semanas en Investigación de Vulnerabilidades.",
+      "bullet2": "Proyecto grupal: desarrollo de Code First Guard, un generador y gestor de contraseñas, actuando como gestora de proyecto.",
+      "bullet3": "Informe grupal de vulnerabilidades de ciberseguridad evaluando nuestro propio proyecto del CFGDegree.",
+      "bullet4": "Informe grupal de investigación de vulnerabilidades que incluye capture the flags, creación de scripts bash para automatizar soluciones, revisión manual de código y diversas técnicas."
+    }
+  },
+  "projectData": {
+    "code-first-guard": {
+      "summary": "Generador y gestor de contraseñas personalizable, desarrollado por un equipo de seis personas para el programa CFGDegree Summer 2024, entregado en un mes."
+    },
+    "frantechnia-portfolio": {
+      "summary": "Mi sitio web de portfolio personal de marzo de 2026, desarrollado con React 19, TypeScript, TanStack Router y Vite. Con soporte de i18n, sistema de color de acento personalizado y refuerzo de seguridad."
+    },
+    "portfolio-v1": {
+      "summary": "Diciembre 2023 – Marzo 2026. Mi primer sitio de portfolio fue desarrollado con HTML, CSS y JavaScript puros. Tenía un diseño de dos columnas con navegación lateral y demo en vídeo."
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Esta es una documentación selectiva de proyectos en los que he trabajado; parte de nuestro trabajo se desarrolla para uso interno de clientes y no es posible compartirlo, pero continúo desarrollando proyectos personales para demostrar diferentes conjuntos de habilidades.",
+    "notFound": "Proyecto no encontrado",
+    "notesTitle": "Notas del proyecto",
+    "noNotes": "Aún no hay notas del proyecto.",
+    "sectionProblem": "Problema",
+    "sectionRole": "Tu papel",
+    "sectionHighlights": "Puntos destacados",
+    "sectionTradeoffs": "Compromisos de diseño",
+    "sectionPerf": "Rendimiento / economía",
+    "tbd": "Próximamente"
+  },
+  "blog": {
+    "title": "Blog",
+    "updated": "Última actualización:",
+    "englishNotice": "Este blog está publicado en inglés y alojado en Listed.",
+    "listedBackup": "Listed",
+    "postNotFound": "Entrada no encontrada",
+    "noPostSlug": "No hay entrada con slug:",
+    "viewOnListed": "Ver en Listed"
+  }
+}

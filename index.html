@@ -1,70 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Francesca Tynan</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="stylesheet" href="static/css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anta&display=swap">
-</head>
-<body>
-  <header>
-    <h1 class="toplink"><a href="#top">Francesca Tynan</a></h1>
-  </header>
-  <div class="left">
-    <nav>
-      <figure>
-        <img class="portrait" src="static/images/francesca-tynan-portrait.jpeg" alt="Closeup picture of a woman Francesca Tynan smiling." width="20em" 
-        height="20em">
-      </figure>
-      <a class="menu" href="https://linktr.ee/frantechnia" target="_blank">Linktree</a>
-      <br>
-      <a class="menu" href="https://github.com/francescatynan" target="_blank">Github</a>
-      <br>
-      <a class="menu" href="https://www.linkedin.com/in/francescatynan/" target="_blank">LinkedIn</a>
-      <br>
-      <a class="menu" href="https://www.instagram.com/frantechnia/" target="_blank">Instagram</a>
-      <br>
-      <a class="menu" href="https://www.threads.net/@frantechnia" target="_blank">Threads</a>
-      <br>
-      <a class="menu" id="mailto" href="mailto:contact@francescatynan.co.uk" target="_blank">Get in Touch</a>
-    </nav>
-  </div>
-  <div class="right">
-    <section>
-      <h1>About Me</h1>
-      <h3>*Under Reconstruction*</h3>
-      <p>Welcome to my page, I'm Francesca, a Junior Software Engineer at <a href="https://thinktmb.com" target="_blank">TMB Marketing & Communications</a> and career switcher with a backgroung in customer service including mentoring and training experience, awards for performance and production of support materials for my former employer's intranet. Additionally I managed a commercial scale support project via Google Sheets.</p>
-      <p>I'm a <a href="https://cajigo.com" target="_blank">Cajigo</a> 100 Women in Tech 2024 Mentee, and a <a href="https://codefirstgirls.com" target="_blank">Code First Girls</a> alumna via the intensive 16 week 'CFGDegree' Software/Data Engineering 
-        bootcamp, 4 week '+Masters' Cyber Security extension and 8 week Vulnerability Research specialisation, thanks to education-only sponsorship 
-        from GCGQ kindly making this opportunity possible.</p>
-    </section>
-    <section>
-      <h1>Technical Awareness</h1>
-      <p>With my studies delving into security principles and vulnerabilities, secure coding practices are at the forefront of my approach. My 
-        approach to coding is led by concepts like AAA, the CIA triad, the importance of HTTPS, input validation and broadly speaking security 
-        by design to mitigate threats and protect against common vulnerabilities. Considerations of access control, salting and hashing, and the 
-        principle of least priviledge (PoLP) are just some of the many concepts I'm versed in.</p>
-      <p>I have covered a broad range of learning beyond simply languages. Comfortable with MySQL, Python with Flask, HTML, CSS and Javascript, 
-        I've also written unittests, utilised test-driven development (TDD), Git, Github, Jira, Trello, pair programming, code reviews and written 
-        assessed reports from the perspective of a security analyst, and a vulnerability researcher.</p>
-      <p>I continue to expand my learning proactively and look eagerly to a long future in this industry.</p>
-    </section>
-    <section>
-      <h1>CFGDegree Group Project</h1>
-      <p>As a group of six, we finished our Code First Girls CFGDegree Summer 2024 in Software/Data Engineering by collaborating to create 
-        a customisable password generator and password manager within a month utilising MySQL, Python, Flask, HTML, CSS and JavaScript. I acted as 
-        project manager and we made use of Jira, GitHub Branches, Trello and code reviews. See our results below. We made use of hashing and salting 
-        amongst other security precautions to protect the data of our web app's users.</p>
-      <video width="400em" height="300em" autoplay="false" controls="true" src="static/video/code-first-guard-demo.mp4" type="video/mp4">Your browser does not support the 
-        video tag.</video>
-    </section>
-  </div>
-  <footer>
-    <p>&copy; 2024 Francesca Tynan. All Rights Reserved.</p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" sizes="any" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="/favicon-light.ico" sizes="any" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Security -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; media-src 'self'; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; base-uri 'self'; form-action 'self';" />
+    <meta name="robots" content="index, follow, max-image-preview:none" />
+
+    <title>Francesca — Junior Software Engineer</title>
+    <meta
+      name="description"
+      content="Francesca — Junior Software Engineer. I build clean, performance-minded web applications with React, TypeScript, GraphQL, and Postgres."
+    />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://francescatynan.co.uk/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Francesca — Junior Software Engineer" />
+    <meta
+      property="og:description"
+      content="Clean, performance-minded web applications with React, TypeScript, GraphQL, and Postgres."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://francescatynan.co.uk/" />
+    <!-- og:image: add once a 1200×630px social share image is created -->
+    <!-- <meta property="og:image" content="https://francescatynan.co.uk/og.png" /> -->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Francesca Tynan",
+      "url": "https://francescatynan.co.uk",
+      "jobTitle": "Junior Software Engineer",
+      "sameAs": [
+        "https://github.com/francescatynan",
+        "https://www.linkedin.com/in/francescatynan/",
+        "https://www.instagram.com/frantechnia/",
+        "https://www.threads.net/@frantechnia"
+      ]
+    }
+    </script>
+
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var prefersDark =
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var theme = saved || (prefersDark ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <style>
+        body { font-family: serif; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background: #111110; color: #FFE9D6; text-align: center; padding: 24px; box-sizing: border-box; }
+      </style>
+      <p>This site requires JavaScript to run. Please enable JavaScript in your browser settings.</p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
