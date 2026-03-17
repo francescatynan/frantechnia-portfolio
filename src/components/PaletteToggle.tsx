@@ -112,6 +112,7 @@ export default function PaletteToggle() {
       {active === "custom" && showWarning && (
         <div
           role="alert"
+          className="contrastWarning"
           style={{
             position: "absolute",
             top: 0,

@@ -447,6 +447,21 @@ img, video { display: block; }
   .navMobileDrawer a { font-family: var(--font-display); }
 }
 
+@media (max-width: 1400px) {
+  .experienceFeatured {
+    flex-direction: column !important;
+  }
+  .experienceFeatured > div {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-left: none !important;
+    border-top: 1px solid var(--border);
+  }
+  .experienceFeatured > div:first-child {
+    border-top: none;
+  }
+}
+
 /* ================================
    Portrait — rounded square
 ================================ */
@@ -603,11 +618,38 @@ video::-webkit-media-controls-enclosure { overflow: hidden; }
 .palettePicker hr { border: none; border-top: 1px solid var(--border); margin: 4px 0; }
 .paletteSwatch { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; transform: translateY(-2px); }
 
+@media (max-width: 768px) {
+  .contrastWarning {
+    position: static !important;
+    width: auto !important;
+    margin-top: 6px;
+  }
+}
+
 /* ================================
    Carousel
 ================================ */
 .carousel::-webkit-scrollbar { display: none; }
 .carousel { scrollbar-width: none; }
+
+@media (max-width: 1600px) {
+  .carouselCard {
+    flex-direction: column !important;
+  }
+  .carouselCardText {
+    width: 100% !important;
+  }
+  .carouselVideo {
+    width: 100% !important;
+    order: 3;
+  }
+  .carouselTags {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    margin-left: 0 !important;
+    order: 2;
+  }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .carouselDots button {
@@ -678,6 +720,12 @@ video::-webkit-media-controls-enclosure { overflow: hidden; }
   display: flex;
   align-items: center;
 }
+@media (max-width: 640px) {
+  .clientLogos > div {
+    gap: 10px !important;
+  }
+}
+
 .clientLogo img {
   height: 22px;
   width: auto;

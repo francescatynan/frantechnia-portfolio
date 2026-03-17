@@ -97,10 +97,10 @@ export default function ProjectsCarousel({ items }: { items: Project[] }) {
             style={{ scrollSnapAlign: "start", padding: 2 }}
           >
             <div className="card" style={{ minHeight: 190 }}>
-              <div style={{ display: "flex", gap: 12, alignItems: "stretch" }}>
+              <div className="carouselCard" style={{ display: "flex", gap: 12, alignItems: "stretch" }}>
 
                 {/* Text content */}
-                <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", minWidth: 0, width: 230, flexShrink: 0 }}>
+                <div className="carouselCardText" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", minWidth: 0, width: 230, flexShrink: 0 }}>
                   <div>
                     <strong style={{ fontSize: "1.1rem", fontFamily: "var(--font-display)", color: "var(--fg)" }}>
                       <Link to="/projects/$slug" params={{ slug: p.slug }} style={{ color: "inherit", textDecoration: "none" }}>
@@ -137,13 +137,14 @@ export default function ProjectsCarousel({ items }: { items: Project[] }) {
                     controls
                     controlsList="nodownload"
                     disablePictureInPicture
+                    className="carouselVideo"
                     style={{ width: 380, maxWidth: "100%", borderRadius: 8, border: "1px solid var(--border)", display: "block", height: "auto", flexShrink: 0 }}
                   />
                 )}
 
                 {/* Tags — pushed to far right */}
                 {p.tags?.length ? (
-                  <div style={{ display: "flex", flexDirection: "column", gap: 6, flexShrink: 0, marginLeft: "auto" }}>
+                  <div className="carouselTags" style={{ display: "flex", flexDirection: "column", gap: 6, flexShrink: 0, marginLeft: "auto" }}>
                     {p.tags.slice(0, 6).map((tag) => (
                       <Tag key={tag}>{tag}</Tag>
                     ))}

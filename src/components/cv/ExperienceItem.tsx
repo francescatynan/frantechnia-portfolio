@@ -92,7 +92,7 @@ export function ExperienceItem({
         return (
           <div className="clientLogos">
             {rows.map((row, ri) => (
-              <div key={ri} style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 32, width: "100%", flexShrink: 0 }}>
+              <div key={ri} style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 16, width: "100%", flexWrap: "wrap" }}>
                 {row.map(({ slug, name }) => (
                   <span key={slug} className="clientLogo" title={name} style={{ flex: row.length === 2 ? "0 1 120px" : "unset" }}>
                     <img src={`/clients/${slug}/logo-dark.svg`}  alt={name} className="clientLogo--dark"  />

@@ -101,6 +101,17 @@ app.get("/api/blog", async (_req, res) => {
   }
 });
 
+// GitHub contributions proxy
+app.get("/api/github-contributions", async (_req, res) => {
+  try {
+    const r = await fetch("https://github-contributions-api.jogruber.de/v4/francescatynan?y=last");
+    if (!r.ok) return res.status(502).json({ error: "Upstream error" });
+    res.json(await r.json());
+  } catch {
+    res.status(503).json({ error: "Failed to fetch contributions" });
+  }
+});
+
 // SPA fallback — all unmatched routes serve index.html
 app.use((_req, res) => {
   res.sendFile(join(DIST, "index.html"));
