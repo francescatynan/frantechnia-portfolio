@@ -61,7 +61,7 @@
       "bullet1": "Extensión de 4 semanas en Ciberseguridad '+Masters' y especialización de 8 semanas en Investigación de Vulnerabilidades.",
       "bullet2": "Proyecto grupal: desarrollo de Code First Guard, un generador y gestor de contraseñas, actuando como gestora de proyecto.",
       "bullet3": "Informe grupal de vulnerabilidades de ciberseguridad evaluando nuestro propio proyecto del CFGDegree.",
-      "bullet4": "Informe grupal de investigación de vulnerabilidades que incluye capture the flags, creación de scripts bash para automatizar soluciones, revisión manual de código y diversas técnicas."
+      "bullet4": "Informe grupal de investigación de vulnerabilidades que incluye capture the flags, creación de scripts bash y python para automatizar soluciones, revisión manual de código y diversas técnicas."
     }
   },
   "projectData": {
