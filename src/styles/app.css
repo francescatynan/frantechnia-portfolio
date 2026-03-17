@@ -291,6 +291,15 @@ img, video { display: block; }
 @media (max-width: 768px) {
   .navLinks { display: none; }
   .navHamburger { display: flex; }
+  .navHeaderControls { display: none !important; }
+  .navMobileControls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 8px 4px 4px;
+    border-top: 1px solid var(--border);
+    margin-top: 4px;
+  }
 }
 
 /* ================================

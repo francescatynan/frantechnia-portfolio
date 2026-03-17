@@ -37,7 +37,7 @@ export default function LayoutShellTopNav({ children }: { children: ReactNode })
       <header className="topNav">
         <div className="topNavInner">
 
-          <div style={{ flex: 1, display: "flex", justifyContent: "flex-start", gap: 8, alignItems: "center" }}>
+          <div className="navHeaderControls" style={{ flex: 1, display: "flex", justifyContent: "flex-start", gap: 8, alignItems: "center" }}>
             <ThemeToggle />
             <PaletteToggle />
           </div>
@@ -67,7 +67,7 @@ export default function LayoutShellTopNav({ children }: { children: ReactNode })
           </div>
 
           <div style={{ flex: 1, display: "flex", justifyContent: "flex-end", gap: 8, alignItems: "center" }}>
-            <LanguageToggle />
+            <span className="navHeaderControls"><LanguageToggle /></span>
 
             <button
               className="navHamburger"
@@ -85,9 +85,14 @@ export default function LayoutShellTopNav({ children }: { children: ReactNode })
       </header>
 
       <nav className={`navMobileDrawer${mobileOpen ? " open" : ""}`} aria-label="Mobile navigation">
-        <Link to="/"         aria-current={navCurrent("/")}        onClick={() => setMobileOpen(false)}>Francesca Tynan</Link>
+        <Link to="/"         aria-current={navCurrent("/")}        onClick={() => setMobileOpen(false)}>{t("nav.home")}</Link>
         <Link to="/projects" aria-current={navCurrent("/projects")} onClick={() => setMobileOpen(false)}>{t("nav.projects")}</Link>
         <Link to="/blog"     aria-current={navCurrent("/blog")}     onClick={() => setMobileOpen(false)}>{t("nav.blog")}</Link>
+        <div className="navMobileControls">
+          <ThemeToggle />
+          <PaletteToggle />
+          <LanguageToggle />
+        </div>
       </nav>
 
       <main id="content">
