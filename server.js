@@ -6,9 +6,8 @@ import { JSDOM } from "jsdom";
 import createDOMPurify from "dompurify";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const DIST   = join(__dirname, "dist");
-const VIDEOS = process.env.VIDEOS_PATH || join(__dirname, "videos");
-const PORT   = process.env.PORT || 3000;
+const DIST = join(__dirname, "dist");
+const PORT = process.env.PORT || 3000;
 
 // ── Blog feed ─────────────────────────────────────────────────────────────────
 
@@ -58,9 +57,6 @@ async function loadFeed() {
 // ── Express ───────────────────────────────────────────────────────────────────
 
 const app = express();
-
-// Serve persistent video files (outside dist — survives redeploys)
-app.use(express.static(VIDEOS));
 
 // Serve built static assets with correct MIME types
 app.use(express.static(DIST));

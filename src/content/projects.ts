@@ -51,7 +51,7 @@ export const projects: Project[] = [
       { label: "View on GitHub", href: "https://github.com/francescatynan/frantechnia-portfolio" },
     ],
     featured: true,
-    videoUrl: "/my-portfolio-demo.mov",
+    videoUrl: "/portfolio-v2-demo.mp4",
   },
   {
     slug: "portfolio-v1",
@@ -62,6 +62,6 @@ export const projects: Project[] = [
       { label: "View on GitHub", href: "https://github.com/francescatynan/frantechnia-portfolio", private: false },
     ],
     featured: true,
-    videoUrl: "/portfolio-v1-demo.mov",
+    videoUrl: "/portfolio-v1-demo.mp4",
   }
 ];
