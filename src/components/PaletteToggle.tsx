@@ -93,6 +93,35 @@ export default function PaletteToggle() {
   const ratio  = parseFloat(contrastRatio(customAccent, bg).toFixed(2));
   const passes = ratio >= 4.5;
 
+  const warningBox = active === "custom" && showWarning ? (
+    <>
+      <button
+        type="button"
+        onClick={handleFix}
+        className="inlineLink"
+        style={{ background: "none", border: "none", padding: 0, cursor: "pointer", color: "var(--fg)", fontSize: "0.65rem" }}
+      >
+        {t("actions.fixContrast")}
+      </button>
+      <p style={{ margin: 0, fontSize: "0.65rem", color: "var(--fg)", lineHeight: 1.4 }}>
+        <Trans
+          i18nKey="actions.contrastMessage"
+          values={{ ratio }}
+          components={{
+            webaim: (
+              <a
+                href="https://webaim.org/resources/contrastchecker/"
+                target="_blank"
+                rel="noreferrer"
+                style={{ color: "inherit", textDecoration: "underline" }}
+              />
+            ),
+          }}
+        />
+      </p>
+    </>
+  ) : null;
+
   return (
     <div ref={ref} style={{ position: "relative", display: "flex", alignItems: "center", gap: 6 }}>
       <div style={{ position: "relative" }}>
@@ -109,10 +138,10 @@ export default function PaletteToggle() {
         {t("actions.colourAccent")}
       </button>
 
-      {active === "custom" && showWarning && (
+      {warningBox && (
         <div
           role="alert"
-          className="contrastWarning"
+          className="contrastWarning contrastWarning--desktop"
           style={{
             position: "absolute",
             top: 0,
@@ -131,30 +160,7 @@ export default function PaletteToggle() {
             zIndex: 10,
           }}
         >
-          <button
-            type="button"
-            onClick={handleFix}
-            className="inlineLink"
-            style={{ background: "none", border: "none", padding: 0, cursor: "pointer", color: "var(--fg)", fontSize: "0.65rem" }}
-          >
-            {t("actions.fixContrast")}
-          </button>
-          <p style={{ margin: 0, fontSize: "0.65rem", color: "var(--fg)", lineHeight: 1.4 }}>
-            <Trans
-              i18nKey="actions.contrastMessage"
-              values={{ ratio }}
-              components={{
-                webaim: (
-                  <a
-                    href="https://webaim.org/resources/contrastchecker/"
-                    target="_blank"
-                    rel="noreferrer"
-                    style={{ color: "inherit", textDecoration: "underline" }}
-                  />
-                ),
-              }}
-            />
-          </p>
+          {warningBox}
         </div>
       )}
       </div>
@@ -207,6 +213,27 @@ export default function PaletteToggle() {
               aria-label={t("actions.pickCustomAccent")}
             />
           </button>
+
+          {warningBox && (
+            <div
+              role="alert"
+              className="contrastWarning contrastWarning--mobile"
+              style={{
+                border: "1px solid var(--border)",
+                borderLeft: "3px solid var(--fg)",
+                borderRight: "3px solid var(--fg)",
+                borderRadius: "var(--radius)",
+                background: "var(--panel)",
+                padding: "8px 12px",
+                display: "flex",
+                flexDirection: "column",
+                gap: 4,
+                textAlign: "center",
+              }}
+            >
+              {warningBox}
+            </div>
+          )}
 
         </div>
       )}
